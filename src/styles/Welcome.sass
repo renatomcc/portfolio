@@ -1,0 +1,71 @@
+@use 'variables'
+@use 'showContent'
+
+.welcome
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    height: 100vh
+    align-items: left
+    h4
+        font-size: 20px
+        color: variables.$tertiaryColor
+        font-family: variables.$primaryFont
+    h1
+        margin: 20px 0px 0px
+        color: variables.$secondaryColor
+        font-size: 75px
+        font-family: variables.$secondaryFont
+    h3
+        color: variables.$primaryFontColor
+        font-family: variables.$primaryFont
+        font-size: 20px
+
+#getInTouchButton
+    color: variables.$secondaryColor
+    padding: 15px 30px
+    text-decoration: none
+    font-weight: bold
+    margin-top: 50px
+    width: 200px
+    border-radius: 5px
+    background-color: transparent
+    font-size: 25px
+    border: 2px solid variables.$secondaryColor
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+        background-color: #6d4eb886
+        cursor: pointer
+        color: variables.$tertiaryColor
+        transition: 0.3s
+
+@media only screen and ( max-width: 550px )
+    .welcome
+        width: 100%
+        align-items: center
+        justify-content: center
+        gap: 20px
+        text-align: center
+        h4
+            font-size: 20px
+            color: variables.$tertiaryColor
+            padding: 0px 10px
+        h1
+            margin: 20px 0px 0px
+            color: variables.$secondaryColor
+            font-size: 45px
+        h3
+            color: variables.$primaryFontColor
+            font-size: 20px
+            padding: 0px 10px
+    .button
+        height: 50px
+        width: 180px
+        font-size: 20px
+        a
+            text-decoration: none
+            color: variables.$secondaryColor
+            padding: 10px 10px

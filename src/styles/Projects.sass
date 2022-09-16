@@ -1,0 +1,155 @@
+@use 'variables'
+@use 'showContent'
+
+.projects
+    height: auto
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-content: center
+    padding-top: 80px
+
+.projectsTitle
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: left
+    gap: 10px
+    color: variables.$primaryFontColor
+    padding: 10px
+    font-size: 40px
+    text-align: left
+    &::after
+        position: relative
+        display: block
+        width: 100%
+        height: 1px
+        background-color: variables.$tertiaryColor
+        content: ''
+        opacity: 0.3
+
+.projectsContent
+    width: 100%
+    padding: 10px
+    gap: 10px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+.itemCard
+    padding: 10px
+    animation: all ease-in-out forwards
+    transition: all 0.3s
+    overflow: hidden
+    left: 0
+    width: 400px
+    height: 320px
+    display: flex
+    flex-direction: column
+    align-items: center
+    opacity: 0.5
+    img
+        width: 100%
+        border-radius: 15px
+    &:hover
+        opacity: 1
+        height: 550px
+
+.itemTitle
+    font-size: 35px
+    font-weight: bold
+    color: variables.$primaryFontColor
+    padding: 15px
+
+.itemDescription
+    font-size: 18px
+    text-align: center
+    line-height: 23px
+    color: variables.$tertiaryColor
+    span
+        font-family: variables.$tertiaryFont
+
+.icons
+    width: 100%
+    display: flex
+    padding: 15px
+    justify-content: center
+    svg
+        width: 45px
+        margin: 0px 15px
+        cursor: pointer
+        fill: none
+        stroke: variables.$tertiaryColor
+        background-color: variables.$backgroundColor
+        animation-fill-mode: forwards
+        -webkit-transform: translateY(-10%)
+        transform: translateY(-10%)
+        will-change: transform
+        transition: 0.3s
+        &:hover
+            stroke: variables.$secondaryColor
+
+#gitLink
+    fill: none
+    background-color: none
+
+@media only screen and ( max-width: 1400px )
+    .itemCard
+        width: 350px
+        height: 280px
+
+@media only screen and ( max-width: 1250px )
+    .itemCard
+        width: 300px
+        height: 250px
+
+@media only screen and ( max-width: 1080px )
+    .itemCard
+        width: 220px
+        height: 200px
+    .itemTitle
+        font-size: 28px
+        font-weight: bold
+        color: variables.$primaryFontColor
+        padding: 15px
+
+@media only screen and ( max-width: 800px )
+    .itemCard
+        padding: 10px
+        width: 300px
+        height: 500px
+        opacity: 1
+        &:hover
+            height: 500px
+
+    .itemTitle
+        display: none
+
+    .itemDescription
+        margin-top: 15px
+        font-size: 18px
+        text-align: center
+        line-height: 23px
+        color: variables.$tertiaryColor
+        span
+            font-family: variables.$tertiaryFont
+
+    .icons
+        width: 100%
+        display: flex
+        padding: 15px
+        justify-content: center
+        svg
+            width: 35px
+            margin: 0px 15px
+            cursor: pointer
+            fill: none
+            stroke: variables.$tertiaryColor
+            background-color: variables.$backgroundColor
+            animation-fill-mode: forwards
+            -webkit-transform: translateY(-10%)
+            transform: translateY(-10%)
+            will-change: transform
+            transition: 0.3s
+            &:hover
+                stroke: variables.$secondaryColor

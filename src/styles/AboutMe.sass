@@ -1,0 +1,59 @@
+@use 'variables'
+@use 'showContent'
+
+.aboutme
+    height: 80vh
+    display: flex
+    flex-direction: column
+    align-content: center
+    padding-top: 80px
+    img
+        width: 250px
+        border-radius: 10px
+        opacity: 0.3
+        transition: 0.3s
+        &:hover
+            opacity: 1
+
+.aboutMeTitle
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: left
+    gap: 10px
+    color: variables.$primaryFontColor
+    padding: 10px
+    font-size: 40px
+    &::after
+        position: relative
+        display: block
+        width: 100%
+        height: 1px
+        background-color: variables.$tertiaryColor
+        content: ''
+        opacity: 0.3
+
+.aboutMeContent
+    padding: 10px
+    gap: 10px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.description
+    color: variables.$tertiaryColor
+    font-size: 25px
+    span
+        font-family: variables.$primaryFont
+
+.picture
+    img
+
+
+@media only screen and ( max-width: 801px )
+
+    .aboutMeContent
+        margin-top: 15px
+        flex-direction: column
+        text-align: center
+        gap: 30px

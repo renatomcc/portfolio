@@ -1,0 +1,178 @@
+@use 'variables'
+@use 'showContent'
+
+.skills
+    height: 100vh
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-content: center
+    padding-top: 80px
+
+.skillsTitle
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: right
+    gap: 10px
+    color: variables.$primaryFontColor
+    padding: 10px
+    font-size: 40px
+    text-align: right
+    &::after
+        position: relative
+        display: block
+        width: 100%
+        height: 1px
+        background-color: variables.$tertiaryColor
+        content: ''
+        opacity: 0.3
+
+.skillsContent
+    padding: 10px
+    gap: 10px
+    flex-direction: column
+    display: flex
+    align-items: center
+    justify-content: center
+
+.skillsDescription
+    color: variables.$tertiaryColor
+    font-size: 20px
+    margin-bottom: 50px
+    text-align: center
+
+.skillsItems
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    ul
+        gap: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        li
+            gap: 10px
+            list-style: none
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 180px
+            height: 180px
+            font-size: 20px
+            font-weight: lighter
+            font-family: variables.$primaryFont
+            color: variables.$primaryFontColor
+            svg
+                width: 100%
+                height: 100%
+                fill: variables.$iconColor
+                transition: 0.5s
+                cursor: pointer
+
+#htmlSVG:hover
+    fill: #f16529
+
+#cssSVG:hover
+    fill: #00aee5
+
+#jsSVG:hover
+    fill: #f7df1e
+
+#sassSVG:hover
+    fill: #ce6498
+
+#bootstrapSVG:hover
+    fill: #8a0afc
+
+#reactSVG:hover
+    fill: #7bd7f8
+
+#typescriptSVG:hover
+    fill: #007acd
+
+#nodejsSVG:hover
+    fill: #51b05e
+
+#gitSVG:hover
+    fill: #f05033
+
+.psIconLightFill
+    fill: #b4d2ff
+
+.psIconDarkFill
+    fill: #6b8ec4
+
+#photoshopSVG:hover
+    filter: invert(14%) sepia(35%) saturate(624%) brightness(70%) contrast(287%)
+
+@media only screen and ( max-width: 1300px )
+    .skills
+        height: 75vh
+    .skillsItems
+        ul
+            li
+                width: 130px
+                height: 130px
+                font-size: 18px
+
+@media only screen and ( max-width: 1100px )
+    .skills
+        height: 75vh
+    .skillsItems
+        ul
+            li
+                width: 120px
+                height: 120px
+
+@media only screen and ( max-width: 900px )
+    .skills
+        height: 75vh
+    .skillsItems
+        ul
+            li
+                font-size: 16px
+                width: 110px
+                height: 110px
+
+@media only screen and ( max-width: 835px )
+    .skills
+        height: 80vh
+    .skillsItems
+        ul
+            li
+                width: 100px
+                height: 100px
+
+@media only screen and ( max-width: 590px )
+    .skills
+        height: 75vh
+    .skillsItems
+        ul
+            li
+                width: 90px
+                height: 90px
+
+@media only screen and ( max-width: 532px )
+    .skills
+        height: 70vh
+    .skillsItems
+        ul
+            li
+                width: 80px
+                height: 80px
+
+@media only screen and ( max-width: 460px )
+    .skills
+        height: 85vh
+
+@media only screen and ( max-width: 325px )
+    .skillsItems
+        ul
+            li
+                width: 70px
+                height: 70px

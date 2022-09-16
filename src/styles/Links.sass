@@ -1,0 +1,79 @@
+@use 'variables'
+@use 'showContent'
+
+.Links
+    margin-top: 150px
+    display: flex
+    flex-direction: column
+    align-content: center
+    padding-top: 80px
+
+.linksTitle
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 10px
+    color: variables.$primaryFontColor
+    padding: 10px
+    font-size: 40px
+    margin-bottom: 50px
+    &::after
+        position: relative
+        display: block
+        width: 40%
+        height: 1px
+        background-color: variables.$tertiaryColor
+        content: ''
+        opacity: 0.3
+
+.linksContent
+    width: 100%
+    height: 100%
+    padding: 10px
+    gap: 10px
+    display: flex
+    gap: 100px
+    margin-bottom: 50px
+
+.linkIcon
+    svg
+        cursor: pointer
+        width: 110px
+        fill: variables.$tertiaryColor
+        stroke: none
+        border-radius: 35px
+        transition: 0.3s
+        &:hover
+            transition: 0.3s
+            fill: variables.$secondaryColor
+            animation-fill-mode: forwards
+            -webkit-transform: translateY(-10%)
+            transform: translateY(-10%)
+            will-change: transform
+
+@media only screen and ( max-width: 900px )
+    .linkIcon
+        svg
+            width: 60px
+
+@media only screen and ( max-width: 801px )
+    .Links
+        width: 100vw
+    .linksContent
+        justify-content: center
+        flex-wrap: wrap
+    .linkIcon
+        svg
+            width: 80px
+
+@media only screen and ( max-width: 450px )
+    .Links
+        width: 100vw
+    .linksContent
+        justify-content: center
+        flex-wrap: wrap
+        gap: 10px
+    .linkIcon
+        svg
+            width: 50px

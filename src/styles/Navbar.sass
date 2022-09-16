@@ -1,0 +1,101 @@
+@use 'variables'
+@use 'showContent'
+
+.navBar
+    opacity: 0
+    position: fixed
+    top: 0px
+    width: 100%
+    display: flex
+    color: variables.$secondaryColor
+    justify-content: space-between
+    padding: 10px 50px
+    z-index: 3
+    animation: showContent 0.5s linear forwards
+
+.pageLogo
+    a
+        svg
+            width: 45px
+            stroke: black
+            stroke-width: 6px
+            path
+                stroke-dasharray: 700
+                stroke-dashoffset: 1400
+                transition: 1s
+                fill: variables.$secondaryColor
+                animation: 2s
+                &:hover
+                    transition: 1s
+                    animation: animateLogo 2s linear forwards
+
+@keyframes animateLogo
+    0%
+        stroke-dashoffset: 0
+        fill: transparent
+    80%
+        stroke-dashoffset: 1400
+        fill: transparent
+    100%
+        stroke-dashoffset: 1400
+        fill: variables.$secondaryColor
+
+.navMenu
+    display: flex
+
+.navLinks
+    display: flex
+    align-content: center
+    align-items: center
+    ul
+        list-style: none
+        display: flex
+        width: 400px
+        justify-content: space-around
+        li
+            a
+                font-weight: bold
+                text-decoration: none
+                font-size: 20px
+                color: variables.$secondaryColor
+
+.scroll-up
+    background-color: #0a192f8c
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.4)
+    backdrop-filter: blur(8px)
+    transition: transform 300ms linear
+    will-change: transform
+
+.scroll-down
+    -webkit-transform: translateY(-100%)
+    transform: translateY(-100%)
+    transition: transform 250ms linear
+    will-change: transform
+
+.standard
+    background-color: variables.$backgroundColor
+
+.hamburger
+    display: none
+    position: absolute
+    z-index: 99
+
+.showMenu
+    -webkit-transform: translateX(0%)
+    transform: translateX(0%)
+    transition: transform 250ms linear
+    will-change: transform
+
+.hideMenu
+    -webkit-transform: translateX(100%)
+    transform: translateX(100%)
+    transition: transform 250ms linear
+    will-change: transform
+
+@media only screen and ( min-width: 800px )
+    .navBar
+        display: flex
+
+@media only screen and ( max-width: 801px )
+    .navBar
+        display: none
