@@ -134,7 +134,7 @@ export const Projects = () => {
                             </div>
                             <div className="itemDescription">
                                 <span>A new pokedex created using <b>ReactJS, Typescript, Mantine Framework</b> and <b>Styled Components</b>.
-                                    <br /> This Pokedex contain a lot more features such in the <b>Modal</b>
+                                    <br /> This Pokedex contain a lot more features and infos available on the <b>Modal</b>
                                     <br /> And also a lot more <b>Filter options.</b></span>
                             </div>
                             <div className="icons">
