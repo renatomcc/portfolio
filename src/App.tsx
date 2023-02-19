@@ -9,7 +9,7 @@ function App() {
     <Container>
       <Home />
       <AboutMe />
-      <Projects/>
+      <Projects />
     </Container>
   );
 }

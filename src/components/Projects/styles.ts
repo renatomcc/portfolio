@@ -14,21 +14,23 @@ export const Container = styled.div`
   font-family: "Roboto", sans-serif;
   gap: 15px;
   text-align: left;
-  background-color: green;
   ${media.mobile} {
-    background-color: beige;
     width: auto;
   }
 `;
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
   position: relative;
   display: flex;
   padding: 10px;
-
   ${media.mobile} {
     flex-direction: column;
     align-items: center;
+    gap: 100px;
   }
 `;
 
@@ -50,7 +52,7 @@ export const Title = styled.div`
     white-space: nowrap;
   }
   hr {
-    margin-left: 8px;
+    margin-right: 8px;
     width: 350px;
     height: 1px;
     border-color: rgba(115, 75, 209, 0.4);
@@ -59,11 +61,3 @@ export const Title = styled.div`
     }
   }
 `;
-
-export const ProjectImage = styled.div`
-  img {
-    width: 500px;
-  }
-`;
-
-export const ProjectDescription = styled.div``;
