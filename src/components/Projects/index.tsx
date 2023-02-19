@@ -22,7 +22,6 @@ function Projects() {
             "TypeScript",
             "Styled Components",
             "Mantine",
-            "Rest API",
           ]}
           descPosition="left"
           imgPositionLeft="auto"
@@ -41,7 +40,6 @@ function Projects() {
             "Next.js",
             "Styled Components",            
             "Mantine",
-            "Rest API",
           ]}
           descPosition="right"
           imgPositionLeft={0}

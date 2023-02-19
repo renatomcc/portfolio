@@ -24,7 +24,7 @@ export const Container = styled.div`
   gap: 15px;
   text-align: left;
   ${media.mobile} {
-    width: auto;
+    width: 100%;
   }
 `;
 

@@ -16,7 +16,7 @@ export const Container = styled.div`
   text-align: center;
 
   ${media.mobile} {
-    width: auto;
+    width: 100%;
     padding: 20px;
   }
 `;

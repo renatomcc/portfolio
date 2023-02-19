@@ -16,7 +16,7 @@ export const Container = styled.div`
   text-align: left;
 
   ${media.mobile} {
-    width: auto;
+    width: 100%;
     margin-bottom: 100px;
   }
 `;
