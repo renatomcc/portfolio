@@ -46,6 +46,8 @@ export const Title = styled.div`
     font-family: "Rokkitt", serif;
     font-weight: 550;
     white-space: nowrap;
+    font-weight: bold;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
   }
   hr {
     margin-left: 8px;

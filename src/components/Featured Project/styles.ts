@@ -83,7 +83,7 @@ export const ProjectImage = styled.div`
     transition: all ease-in-out 0.2s;
     cursor: pointer;
     ${media.mobile} {
-      width: 300px;
+      width: 100%;
       filter: opacity(100%);
     }
     &:hover {
@@ -108,7 +108,7 @@ export const ProjectDescription = styled.div<ImageProps>`
   ${media.mobile} {
     top: 0px;
     padding: 5px;
-    width: 300px;
+    width: 90%;
     left: 50%;
     transform: translate(-50%, 0);
     background-color: rgba(1, 18, 40, 0.95);
