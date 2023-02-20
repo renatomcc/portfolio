@@ -5,7 +5,7 @@ const media = {
 };
 
 export const Container = styled.div`
-  width: 900px;
+  width: 930px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   align-items: center;
   font-family: "Roboto", sans-serif;
   gap: 15px;
-  text-align: left;
+  text-align: center;
   ${media.mobile} {
     width: 100%;
   }
@@ -22,11 +22,13 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 60px;
   width: 100%;
   position: relative;
   display: flex;
   padding: 10px;
+  transition: all ease-in-out 0.5s;
   ${media.mobile} {
     flex-direction: column;
     align-items: center;
@@ -40,6 +42,7 @@ export const Title = styled.div`
   width: 100%;
   justify-content: right;
   align-items: center;
+  text-align: center;
 
   ${media.mobile} {
     width: 80%;
@@ -59,5 +62,45 @@ export const Title = styled.div`
     ${media.mobile} {
       width: 100%;
     }
+  }
+`;
+
+export const MoreProjects = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+`;
+
+export const StyledButton = styled.button`
+  width: 160px;
+  height: 40px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: #734bd1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+  border: 1px solid rgba(115, 75, 209, 0.4);
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  :hover {
+    background-color: rgba(115, 75, 209, 0.4);
+  }
+`;
+
+export const SecondTitle = styled.h3`
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  ${media.mobile} {
+    margin-top: 100px;
   }
 `;

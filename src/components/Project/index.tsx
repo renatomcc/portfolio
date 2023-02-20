@@ -1,69 +1,53 @@
 import React from "react";
-import {
-  Container,
-  Content,
-  ProjectImage,
-  ProjectDescription,
-  Buttons,
-} from "./styles";
-
+import { Buttons, Container, Icon, Title } from "./styles";
 import { VscGithub } from "react-icons/vsc";
 import { BiLinkExternal } from "react-icons/bi";
+import { AiFillFolderAdd } from "react-icons/ai";
 
-type ProjectProps = {
+export type ProjectProps = {
   title: string;
   description: string;
-  imageSrc: string;
-  imageAlt: string;
   technologies: string[];
-  descPosition: string;
-  imgPositionLeft: number | string;
-  imgPositionRight: number | string;
   githubLink: string;
-  websiteLink: string;
+  websiteLink: string | null;
 };
 
-const Project: React.FC<ProjectProps> = ({
-  title,
-  description,
-  imageSrc,
-  imageAlt,
-  technologies,
-  descPosition,
-  imgPositionLeft,
-  imgPositionRight,
-  websiteLink,
-  githubLink,
-}) => {
+const Project = (props: ProjectProps) => {
+  const { title, description, technologies, githubLink, websiteLink } = props;
   return (
     <Container>
-      <Content descriptionPosition={descPosition}>
-        <ProjectImage>
-          <a href={websiteLink} target="_blank">
-            <img src={imageSrc} alt={imageAlt} />
+      <div>
+        <Icon>
+          <AiFillFolderAdd size={60} />
+        </Icon>
+        <Buttons>
+          <a
+            target="_blank"
+            href={githubLink}
+            rel="noreferrer"
+            aria-label="GitHub Link"
+          >
+            <VscGithub size={24} />
           </a>
-        </ProjectImage>
-        <ProjectDescription
-          imagePositionLeft={imgPositionLeft}
-          imagePositionRight={imgPositionRight}
-        >
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <ul>
-            {technologies.map((tech) => (
-              <li key={tech}>{tech}</li>
-            ))}
-          </ul>
-          <Buttons>
-            <a target="_blank" href={githubLink}>
-              <VscGithub size={24} />
-            </a>
-            <a target="_blank" href={websiteLink}>
+          {websiteLink ? (
+            <a
+              target="_blank"
+              href={websiteLink}
+              rel="noreferrer"
+              aria-label="Website Link"
+            >
               <BiLinkExternal size={24} />
             </a>
-          </Buttons>
-        </ProjectDescription>
-      </Content>
+          ) : null}
+        </Buttons>
+      </div>
+      <Title>{title}</Title>
+      <p>{description}</p>
+      <ul>
+        {technologies.map((technology, index) => (
+          <li key={index}>{technology}</li>
+        ))}
+      </ul>
     </Container>
   );
 };

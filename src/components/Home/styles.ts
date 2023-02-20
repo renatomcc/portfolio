@@ -5,47 +5,43 @@ const media = {
 };
 
 export const Container = styled.div`
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 50px;
   gap: 15px;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 
   ${media.mobile} {
-    width: 100%;
     padding: 20px;
   }
 `;
 
 export const Text = styled.span`
-  color: ${(props) => props.color};
+  color: ${({ color }) => color || "#eee"};
   font-size: 25px;
   font-family: "Roboto", sans-serif;
   font-weight: 550;
+
   ${media.mobile} {
     font-size: 18px;
   }
 `;
 
-export const BigText = styled.span`
-  color: ${(props) => props.color};
+export const BigText = styled(Text)`
   font-size: 60px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 550;
   ${media.mobile} {
     font-size: 35px;
   }
   margin-bottom: -15px;
 `;
 
-export const SmallText = styled.span`
-  color: ${(props) => props.color};
+export const SmallText = styled(Text)`
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
   margin-top: 15px;
   ${media.mobile} {
     font-size: 15px;
@@ -63,7 +59,13 @@ export const StyledButton = styled.button`
   font-size: 17px;
   transition: all ease-in-out 0.2;
   cursor: pointer;
+
   :hover {
     background-color: rgba(115, 75, 209, 0.2);
+  }
+
+  ${media.mobile} {
+    width: 100%;
+    max-width: 200px;
   }
 `;
