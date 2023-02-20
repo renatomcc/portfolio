@@ -17,7 +17,7 @@ function Projects() {
       title: "Pokédex",
       description:
         "Uma Pokedex com todos os pokemons e suas informações, diversos filtros e opção de favoritar seus pokemons predilétos.",
-      imageSrc: "../../../assets/images/pokedex.png",
+      imageSrc: "/static/images/pokedex.png",
       imageAlt: "Pokedex",
       technologies: ["React", "TypeScript", "Styled Components", "Mantine"],
       descPosition: "left",
@@ -30,7 +30,7 @@ function Projects() {
       title: "League Champions",
       description:
         "Uma aplicação com todos os campeões do game League of Legends com opção de busca por nome, ao clicar no campeão é mostrada suas informações.",
-      imageSrc: "../../../assets/images/league.png",
+      imageSrc: "/static/images/league.png",
       imageAlt: "League Champions",
       technologies: [
         "React",

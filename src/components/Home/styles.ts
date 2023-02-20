@@ -26,8 +26,8 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.span<TextProps>`
-  color: ${(TextProps) => TextProps.color || "#eee"};
   font-size: 25px;
+  color: ${(TextProps) => TextProps.color || "#eee"};
   font-family: "Roboto", sans-serif;
   font-weight: 550;
 
@@ -37,6 +37,9 @@ export const Text = styled.span<TextProps>`
 `;
 
 export const BigText = styled.span`
+  color: ${(TextProps) => TextProps.color || "#eee"};
+  font-family: "Roboto", sans-serif;
+  font-weight: 550;
   font-size: 60px;
   ${media.mobile} {
     font-size: 35px;
@@ -45,6 +48,9 @@ export const BigText = styled.span`
 `;
 
 export const SmallText = styled.span`
+  color: ${(TextProps) => TextProps.color || "#eee"};
+  font-family: "Roboto", sans-serif;
+  font-weight: 550;
   font-size: 20px;
   margin-top: 15px;
   ${media.mobile} {
