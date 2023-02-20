@@ -4,6 +4,10 @@ const media = {
   mobile: "@media(max-width: 900px)",
 };
 
+type TextProps={
+  color: string;
+}
+
 export const Container = styled.div`
   width: 100%;
   max-width: 1000px;
@@ -21,8 +25,8 @@ export const Container = styled.div`
   }
 `;
 
-export const Text = styled.span`
-  color: ${({ color }) => color || "#eee"};
+export const Text = styled.span<TextProps>`
+  color: ${( TextProps ) => TextProps.color || "#eee"};
   font-size: 25px;
   font-family: "Roboto", sans-serif;
   font-weight: 550;
