@@ -4,9 +4,9 @@ const media = {
   mobile: "@media(max-width: 900px)",
 };
 
-type TextProps={
+type TextProps = {
   color: string;
-}
+};
 
 export const Container = styled.div`
   width: 100%;
@@ -26,7 +26,7 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.span<TextProps>`
-  color: ${( TextProps ) => TextProps.color || "#eee"};
+  color: ${(TextProps) => TextProps.color || "#eee"};
   font-size: 25px;
   font-family: "Roboto", sans-serif;
   font-weight: 550;
@@ -36,7 +36,7 @@ export const Text = styled.span<TextProps>`
   }
 `;
 
-export const BigText = styled(Text)`
+export const BigText = styled.span`
   font-size: 60px;
   ${media.mobile} {
     font-size: 35px;
@@ -44,7 +44,7 @@ export const BigText = styled(Text)`
   margin-bottom: -15px;
 `;
 
-export const SmallText = styled(Text)`
+export const SmallText = styled.span`
   font-size: 20px;
   margin-top: 15px;
   ${media.mobile} {
