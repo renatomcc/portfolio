@@ -38,6 +38,7 @@ export const Content = styled.div<DescriptionProps>`
   ${media.mobile} {
     flex-direction: column;
     align-items: center;
+    margin: 30px 0px;
   }
 `;
 
@@ -106,9 +107,13 @@ export const ProjectDescription = styled.div<ImageProps>`
   align-items: center;
   box-shadow: 1px 1px 10px rgb(1, 18, 40);
   ${media.mobile} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     top: 0px;
     padding: 5px;
     width: 90%;
+    height: 280px;
     left: 50%;
     transform: translate(-50%, 0);
     background-color: rgba(1, 18, 40, 0.95);

@@ -102,6 +102,7 @@ export const SecondTitle = styled.h3`
   margin-bottom: 20px;
   font-size: 20px;
   ${media.mobile} {
-    margin-top: 100px;
+    margin-top: 120px;
+    margin-bottom: 0px;
   }
 `;
