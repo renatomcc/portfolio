@@ -43,7 +43,7 @@ function Projects() {
       imgPositionLeft: 0,
       imgPositionRight: "auto",
       githubLink: "https://github.com/renatomcc/league-champions",
-      websiteLink: "https://league-champions-renatomcc.netlify.app/",
+      websiteLink: "https://league-nextjs.vercel.app",
     },
   ];
   const moreProjects = [
