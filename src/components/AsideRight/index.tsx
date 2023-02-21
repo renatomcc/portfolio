@@ -8,7 +8,12 @@ import { MdOutlineMailOutline } from "react-icons/md";
 const Aside = () => {
   return (
     <Container>
-      <span>renattocasttro@gmail.com</span>
+      <a 
+      href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=renattocasttro@gmail.com"
+      target="_blank"
+      >
+        <span>renattocasttro@gmail.com</span>
+      </a>
       <hr />
     </Container>
   );

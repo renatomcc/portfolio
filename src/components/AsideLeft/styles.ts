@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const media = {
-  mobile: "@media(max-width: 900px)",
+  mobile: "@media(max-width: 1100px)",
 };
 
 export const Container = styled.div`
@@ -38,7 +38,3 @@ export const Container = styled.div`
     height: 120px;
   }
 `;
-
-export const LinksBar = styled.div``;
-
-export const EmailBar = styled.div``;

@@ -6,10 +6,12 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import AsideLeft from "./components/AsideLeft";
 import AsideRight from "./components/AsideRight"
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Container>
+      <Navbar/>
       <AsideLeft/>
       <AsideRight/>
       <Home />
