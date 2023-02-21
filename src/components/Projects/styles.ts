@@ -53,7 +53,6 @@ export const Title = styled.div`
     font-weight: 550;
     white-space: nowrap;
     font-weight: bold;
-    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
   }
   hr {
     margin-right: 8px;
@@ -81,19 +80,19 @@ export const AllProjects = styled.div`
 
 export const StyledButton = styled.button`
   width: 160px;
-  height: 40px;
+  height: 45px;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   color: #734bd1;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   background-color: transparent;
-  border: 1px solid rgba(115, 75, 209, 0.4);
+  border: 2px solid #734bd1;
   padding: 8px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
   :hover {
-    background-color: rgba(115, 75, 209, 0.4);
+    background-color: rgba(115, 75, 209, 0.2);
   }
 `;
 

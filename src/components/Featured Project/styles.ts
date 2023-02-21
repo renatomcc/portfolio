@@ -165,7 +165,7 @@ export const Buttons = styled.div`
     transition: all ease-in-out 0.2s;
     color: #734bd1;
     :hover {
-      color: #c0a5ff;
+      color: #4c00ff;
       transform: translateY(-3px);
     }
   }

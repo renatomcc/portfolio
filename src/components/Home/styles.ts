@@ -63,13 +63,12 @@ export const StyledButton = styled.button`
   height: 50px;
   background-color: transparent;
   color: #734bd1;
-  border: 1px solid #734bd1;
+  border: 2px solid #734bd1;
   border-radius: 8px;
   font-family: "Roboto", sans-serif;
   font-size: 17px;
-  transition: all ease-in-out 0.2;
+  transition: all ease-in-out 0.2s;
   cursor: pointer;
-
   :hover {
     background-color: rgba(115, 75, 209, 0.2);
   }

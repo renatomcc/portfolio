@@ -30,7 +30,8 @@ export const Container = styled.a`
 
   }
   :hover ${Title}{
-    color: #c0a5ff;
+    transition: all ease-in-out 0.3s;
+    color: #4c00ff;
   }
   ${media.mobile} {
     width: 300px;
@@ -46,7 +47,7 @@ export const Icon = styled.div`
   left: 0;
   padding: 20px;
   svg {
-    color: #c0a5ff;
+    color: #4c00ff;
   }
   ${media.mobile} {
     padding: 5px;
@@ -64,7 +65,7 @@ export const Buttons = styled.div`
     transition: all ease-in-out 0.1s;
     color: #734bd1;
     :hover {
-      color: #c0a5ff;
+      color: #4c00ff;
     }
   }
 `;

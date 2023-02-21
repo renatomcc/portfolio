@@ -39,7 +39,6 @@ export const Title = styled.div`
     font-weight: 550;
     white-space: nowrap;
     font-weight: bold;
-    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
   }
   hr {
     margin-left: 12px;
@@ -68,12 +67,19 @@ export const Links = styled.div`
   justify-content: space-evenly;
   align-items: center;
   transition: all ease-in-out 0.2s;
+  ${media.mobile} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 50px 0px;
+    }
   svg {
     color: #734bd1;
     transition: all ease-in-out 0.2s;
     cursor: pointer;
     :hover {
-      color: #c0a5ff;
+      color: #4c00ff;
       transform: translateY(-6px);
     }
     path {
