@@ -4,7 +4,13 @@ const media = {
   mobile: "@media(max-width: 1000px)",
 };
 
-export const Container = styled.div`
+export const Title = styled.h3`
+  font-size: 20px;
+  color: #eee;
+  font-family: "Roboto", sans-serif;
+`;
+
+export const Container = styled.a`
   position: relative;
   background-color: black;
   display: flex;
@@ -16,9 +22,15 @@ export const Container = styled.div`
   justify-content: space-around;
   transition: all ease-in-out 0.2s;
   background-color: #011228;
+  text-decoration: none;
+  color: #eee;
   cursor: pointer;
   :hover {
     transform: translateY(-10px);
+
+  }
+  :hover ${Title}{
+    color: #c0a5ff;
   }
   ${media.mobile} {
     width: 300px;
@@ -26,11 +38,7 @@ export const Container = styled.div`
     font-size: 14px;
   }
 `;
-export const Title = styled.h3`
-  font-size: 20px;
-  color: #eee;
-  font-family: "Roboto", sans-serif;
-`;
+
 
 export const Icon = styled.div`
   position: absolute;

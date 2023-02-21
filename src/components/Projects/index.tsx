@@ -5,7 +5,7 @@ import {
   Container,
   Content,
   Title,
-  MoreProjects,
+  AllProjects,
   StyledButton,
   SecondTitle,
 } from "./styles";
@@ -46,7 +46,7 @@ function Projects() {
       websiteLink: "https://league-nextjs.vercel.app",
     },
   ];
-  const moreProjects = [
+  const allProjects = [
     {
       title: "Pokedex v1",
       description:
@@ -96,15 +96,15 @@ function Projects() {
     },
   ];
 
-  const [loadedProjects, setLoadedProjects] = useState<ProjectProps[]>(
-    moreProjects.slice(0, 2)
+  const [displayedProjects, setDisplayedProjects] = useState<ProjectProps[]>(
+    allProjects.slice(0, 2)
   );
 
   function handleShowMore() {
-    if (loadedProjects.length < 6) {
-      setLoadedProjects(moreProjects.slice(0, loadedProjects.length + 2));
+    if (displayedProjects.length < 6) {
+      setDisplayedProjects(allProjects.slice(0, displayedProjects.length + 2));
     } else {
-      setLoadedProjects(moreProjects.slice(0, 2));
+      setDisplayedProjects(allProjects.slice(0, 2));
     }
   }
 
@@ -121,13 +121,13 @@ function Projects() {
       </Content>
       <SecondTitle>Alguns outros projetos</SecondTitle>
       <Content>
-        <MoreProjects>
-          {loadedProjects.map((project, index) => (
+        <AllProjects>
+          {displayedProjects.map((project, index) => (
             <Project key={index} {...project} />
           ))}
-        </MoreProjects>
+        </AllProjects>
         <StyledButton onClick={() => handleShowMore()}>
-          {loadedProjects.length < 6 ? "Mostrar mais" : "Mostrar menos"}
+          {displayedProjects.length < 6 ? "Mostrar mais" : "Mostrar menos"}
         </StyledButton>
       </Content>
     </Container>

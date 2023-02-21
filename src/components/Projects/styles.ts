@@ -66,7 +66,7 @@ export const Title = styled.div`
   }
 `;
 
-export const MoreProjects = styled.div`
+export const AllProjects = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

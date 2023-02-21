@@ -15,40 +15,40 @@ export type ProjectProps = {
 const Project = (props: ProjectProps) => {
   const { title, description, technologies, githubLink, websiteLink } = props;
   return (
-    <Container>
-      <div>
-        <Icon>
-          <AiFillFolderAdd size={60} />
-        </Icon>
-        <Buttons>
-          <a
-            target="_blank"
-            href={githubLink}
-            rel="noreferrer"
-            aria-label="GitHub Link"
-          >
-            <VscGithub size={24} />
-          </a>
-          {websiteLink ? (
+      <Container href={websiteLink ? websiteLink : githubLink} target="_blank">
+        <div>
+          <Icon>
+            <AiFillFolderAdd size={60} />
+          </Icon>
+          <Buttons>
             <a
               target="_blank"
-              href={websiteLink}
+              href={githubLink}
               rel="noreferrer"
-              aria-label="Website Link"
+              aria-label="GitHub Link"
             >
-              <BiLinkExternal size={24} />
+              <VscGithub size={24} />
             </a>
-          ) : null}
-        </Buttons>
-      </div>
-      <Title>{title}</Title>
-      <p>{description}</p>
-      <ul>
-        {technologies.map((technology, index) => (
-          <li key={index}>{technology}</li>
-        ))}
-      </ul>
-    </Container>
+            {websiteLink ? (
+              <a
+                target="_blank"
+                href={websiteLink}
+                rel="noreferrer"
+                aria-label="Website Link"
+              >
+                <BiLinkExternal size={24} />
+              </a>
+            ) : null}
+          </Buttons>
+        </div>
+        <Title>{title}</Title>
+        <p>{description}</p>
+        <ul>
+          {technologies.map((technology, index) => (
+            <li key={index}>{technology}</li>
+          ))}
+        </ul>
+      </Container>
   );
 };
 
