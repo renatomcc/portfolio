@@ -10,6 +10,7 @@ type TextProps = {
 
 export const Container = styled.div`
   width: 100%;
+  height: 100vh;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
@@ -62,13 +63,16 @@ export const StyledButton = styled.button`
   width: 200px;
   height: 50px;
   background-color: transparent;
-  color: #734bd1;
   border: 2px solid #734bd1;
   border-radius: 8px;
-  font-family: "Roboto", sans-serif;
-  font-size: 17px;
   transition: all ease-in-out 0.2s;
   cursor: pointer;
+  a {
+    text-decoration: none;
+    color: #734bd1;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+  }
   :hover {
     background-color: rgba(115, 75, 209, 0.2);
   }

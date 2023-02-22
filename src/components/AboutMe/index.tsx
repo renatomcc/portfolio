@@ -10,7 +10,7 @@ import {
 
 function AboutMe() {
   return (
-    <Container  id="About">
+    <Container>
       <Title>
         <h1>&lt;Sobre mim/&gt;</h1>
         <hr />

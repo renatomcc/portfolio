@@ -5,15 +5,15 @@ import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import AsideLeft from "./components/AsideLeft";
-import AsideRight from "./components/AsideRight"
+import AsideRight from "./components/AsideRight";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Container>
-      <Navbar/>
-      <AsideLeft/>
-      <AsideRight/>
+      <Navbar />
+      <AsideLeft />
+      <AsideRight />
       <Home />
       <AboutMe />
       <Projects />

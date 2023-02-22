@@ -8,6 +8,7 @@ import {
   Menu,
 } from "./styles";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import MySVG from "../../config/MySVG";
 
 const Navbar = () => {
   const [prevScrollPosition, setPrevScrollPosition] = useState(0);
@@ -17,6 +18,7 @@ const Navbar = () => {
 
   const handleScroll = useCallback(() => {
     const currentPosition = window.pageYOffset;
+    console.log(currentPosition);
     setScrollDirection(currentPosition > prevScrollPosition ? "down" : "up");
     setPrevScrollPosition(currentPosition);
   }, [prevScrollPosition]);
@@ -58,11 +60,20 @@ const Navbar = () => {
     <Container
       style={{
         transform: `translateY(${
-          scrollDirection === "down" && !menuOpen ? "-75px" : "0px"
+          scrollDirection === "down" && !menuOpen ? "-80px" : "0px"
         })`,
+        boxShadow: `${
+          (scrollDirection === "down" && !menuOpen) || prevScrollPosition === 0
+            ? "none"
+            : "2px 2px 15px #031123"
+        }`,
       }}
     >
-      <NavbarLogo></NavbarLogo>
+      {!menuOpen && (
+        <NavbarLogo>
+          <MySVG />
+        </NavbarLogo>
+      )}
       <Hamburger
         onClick={() => {
           handleMenu();
@@ -92,8 +103,7 @@ const Navbar = () => {
         </ul>
       </NavbarLinks>
       {menuOpen && (
-        <Menu
-        aria-label="Navigation menu">
+        <Menu aria-label="Navigation menu">
           <ul>
             <li>
               <a href="#About" onClick={() => handleMenu()}>
@@ -110,7 +120,13 @@ const Navbar = () => {
                 <span>03.</span> Links
               </a>
             </li>
-            <StyledButton>Curriculo</StyledButton>
+            <StyledButton>
+              <a
+                href="https://drive.google.com/file/d/1HHIEcl9z86j44CszlG7Ntp0MxQd9CklX/view?usp=sharing"
+              >
+                Curriculo
+              </a>
+            </StyledButton>
           </ul>
         </Menu>
       )}

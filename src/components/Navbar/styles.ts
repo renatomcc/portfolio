@@ -8,25 +8,43 @@ const media = {
 export const Container = styled.div`
   width: 100vw;
   position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 20px 50px;
-  transition: all ease-in-out 0.3s;
+  padding: 15px 50px;
+  transition: all ease-in-out 0.25s;
   box-shadow: 2px 2px 15px #031123;
   backdrop-filter: blur(10px);
   z-index: 99;
   ${media.mobile} {
-    justify-content: space-between;
-    padding: 20px 20px;
+    padding: 10px 20px;
     box-shadow: none;
     backdrop-filter: none;
     background-color: #031123;
   }
 `;
 
-export const NavbarLogo = styled.div``;
+export const NavbarLogo = styled.div`
+  width: 60px;
+  height: 60px;
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+  ${media.mobile} {
+    width: 50px;
+    height: 50px;
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+`;
 
 export const NavbarLinks = styled.div`
+  display: flex;
   ${media.mobile} {
     display: none;
   }
@@ -78,6 +96,11 @@ export const StyledButton = styled.button`
 `;
 
 export const Hamburger = styled.div`
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 100;
   ${media.desktop} {
     display: none;
   }
@@ -99,14 +122,14 @@ export const Menu = styled.div`
     height: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 80px;
     list-style: none;
     width: 100%;
     li {
       a {
-        font-size: 35px;
+        font-size: 25px;
         transition: all ease-in-out 0.2s;
         color: #eee;
         font-family: "Roboto", sans-serif;

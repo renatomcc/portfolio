@@ -14,7 +14,14 @@ function Home() {
         React.js, apaixonado por tecnologia e que adora descobrir e estudar
         novas tecnologias.
       </SmallText>
-      <StyledButton>Entre em contato!</StyledButton>
+      <StyledButton>
+        <a
+          href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=renattocasttro@gmail.com"
+          target="_blank"
+        >
+          Entre em contato!
+        </a>
+      </StyledButton>
     </Container>
   );
 }
