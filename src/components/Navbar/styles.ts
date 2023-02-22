@@ -26,12 +26,16 @@ export const Container = styled.div`
   }
 `;
 
-export const NavbarLogo = styled.div`
+export const NavbarLogo = styled.a`
   width: 60px;
   height: 60px;
+  cursor: pointer;
   svg {
     width: 60px;
     height: 60px;
+    :hover{
+      fill: aliceblue;
+    }
   }
   ${media.mobile} {
     width: 50px;
@@ -73,7 +77,8 @@ export const NavbarLinks = styled.div`
   }
 `;
 
-export const StyledButton = styled.button`
+export const StyledLink = styled.a`
+  display: inline-block;
   width: 100px;
   height: 35px;
   cursor: pointer;
@@ -84,6 +89,9 @@ export const StyledButton = styled.button`
   color: #734bd1;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  line-height: 35px;
   :hover {
     transform: translateY(-3px);
     background-color: rgba(115, 75, 209, 0.2);
@@ -92,6 +100,7 @@ export const StyledButton = styled.button`
     width: 150px;
     height: 50px;
     font-size: 20px;
+    line-height: 50px;
   }
 `;
 

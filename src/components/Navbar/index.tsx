@@ -3,7 +3,7 @@ import {
   Container,
   NavbarLogo,
   NavbarLinks,
-  StyledButton,
+  StyledLink,
   Hamburger,
   Menu,
 } from "./styles";
@@ -30,23 +30,18 @@ const Navbar = () => {
     };
   }, [handleScroll]);
 
-  function handleMenu() {
-    setMenuOpen(!menuOpen);
-    if (!menuOpen) {
-      bodyRef.current.classList.add("menu-open");
-    } else {
-      bodyRef.current.classList.remove("menu-open");
-    }
-  }
+  const handleMenu = useCallback(() => {
+    setMenuOpen((prev) => !prev);
+    bodyRef.current.classList.toggle("menu-open");
+  }, []);
 
   useEffect(() => {
     function handleResize() {
-      const isMobile = window.innerWidth < 1000;
+      const isMobile = window.matchMedia("(max-width: 1000px)").matches;
 
       if (!isMobile && menuOpen) {
         setMenuOpen(false);
-        const body = document.querySelector("body");
-        if (body) body.classList.remove("menu-open");
+        bodyRef.current.classList.remove("menu-open");
       }
     }
 
@@ -70,7 +65,7 @@ const Navbar = () => {
       }}
     >
       {!menuOpen && (
-        <NavbarLogo>
+        <NavbarLogo href="/" aria-label="Ir para o início">
           <MySVG />
         </NavbarLogo>
       )}
@@ -99,7 +94,12 @@ const Navbar = () => {
               <span>03.</span> Links
             </a>
           </li>
-          <StyledButton>Curriculo</StyledButton>
+          <StyledLink
+            href="https://drive.google.com/file/d/17ePfhfq9UqpczqKrIpGczymNUF1FDZiS/view?usp=sharing"
+            target="_blank"
+          >
+            Curriculo
+          </StyledLink>
         </ul>
       </NavbarLinks>
       {menuOpen && (
@@ -120,13 +120,12 @@ const Navbar = () => {
                 <span>03.</span> Links
               </a>
             </li>
-            <StyledButton>
-              <a
-                href="https://drive.google.com/file/d/1HHIEcl9z86j44CszlG7Ntp0MxQd9CklX/view?usp=sharing"
-              >
-                Curriculo
-              </a>
-            </StyledButton>
+            <StyledLink
+              href="https://drive.google.com/file/d/17ePfhfq9UqpczqKrIpGczymNUF1FDZiS/view?usp=sharing"
+              target="_blank"
+            >
+              Curriculo
+            </StyledLink>
           </ul>
         </Menu>
       )}
