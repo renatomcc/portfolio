@@ -8,8 +8,10 @@ import {
   AllProjects,
   StyledButton,
   SecondTitle,
+  ProjectContainer,
 } from "./styles";
 import { ProjectProps } from "../Project";
+import { animated, useTrail, useTransition } from "react-spring";
 
 function Projects() {
   const featuredProjects = [
@@ -47,20 +49,16 @@ function Projects() {
     },
     {
       title: "Guess the Champion",
-      description:
-        "App de adivinhar os campeões do jogo League of Legends.",
+      description: "App de adivinhar os campeões do jogo League of Legends.",
       imageSrc: "/static/images/guess.png",
       imageAlt: "Guess the Champion",
-      technologies: [
-        "React Native",
-        "TypeScript",
-        "Styled Components",
-      ],
+      technologies: ["React Native", "TypeScript", "Styled Components"],
       descPosition: "left",
       imgPositionLeft: "auto",
       imgPositionRight: 0,
       githubLink: "https://github.com/renatomcc/league-guess-the-champion",
-      websiteLink: "https://play.google.com/store/apps/details?id=com.guessTheChampion.app&fbclid=IwAR3BxVZGdATWclsXFlIUKtRP8b8Z983bZndK6FgVaLjN3SZR1-uKZHHqlUg",
+      websiteLink:
+        "https://play.google.com/store/apps/details?id=com.guessTheChampion.app&fbclid=IwAR3BxVZGdATWclsXFlIUKtRP8b8Z983bZndK6FgVaLjN3SZR1-uKZHHqlUg",
     },
   ];
   const allProjects = [
@@ -113,17 +111,23 @@ function Projects() {
     },
   ];
 
-  const [displayedProjects, setDisplayedProjects] = useState<ProjectProps[]>(
+  const [showMore, setShowMore] = useState(false);
+  const [displayedProjects, setDisplayedProjects] = useState(
     allProjects.slice(0, 2)
   );
 
-  function handleShowMore() {
-    if (displayedProjects.length < 6) {
-      setDisplayedProjects(allProjects.slice(0, displayedProjects.length + 2));
-    } else {
-      setDisplayedProjects(allProjects.slice(0, 2));
-    }
-  }
+  const trail = useTrail(displayedProjects.length, {
+    opacity: 1,
+    transform: "translate3d(0,0,0)",
+    from: { opacity: 0, transform: "translate3d(0,-50px,0)" },
+    delay: 200,
+  });
+
+  const handleShowMore = () => {
+    displayedProjects.length < 6
+      ? setDisplayedProjects(allProjects.slice(0, displayedProjects.length + 2))
+      : setDisplayedProjects(allProjects.slice(0, 2));
+  };
 
   return (
     <Container id="Projects">
@@ -139,11 +143,13 @@ function Projects() {
       <SecondTitle>Alguns outros projetos</SecondTitle>
       <Content>
         <AllProjects>
-          {displayedProjects.map((project, index) => (
-            <Project key={index} {...project} />
+          {trail.map((style, index) => (
+            <ProjectContainer key={index} style={style}>
+              <Project {...displayedProjects[index]} />
+            </ProjectContainer>
           ))}
         </AllProjects>
-        <StyledButton onClick={() => handleShowMore()}>
+        <StyledButton onClick={handleShowMore}>
           {displayedProjects.length < 6 ? "Mostrar mais" : "Mostrar menos"}
         </StyledButton>
       </Content>

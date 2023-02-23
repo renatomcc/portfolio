@@ -1,3 +1,4 @@
+import { animated } from "react-spring";
 import styled from "styled-components";
 
 const media = {
@@ -105,4 +106,10 @@ export const SecondTitle = styled.h3`
     margin-top: 120px;
     margin-bottom: 0px;
   }
+`;
+
+export const  ProjectContainer = styled(animated.div)`
+opacity: 0;
+transform-origin: top center;
+will-change: opacity, transform;
 `;

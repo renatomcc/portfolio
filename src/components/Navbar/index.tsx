@@ -65,7 +65,7 @@ const Navbar = () => {
     <Container
       style={{
         transform: `translateY(${
-          scrollDirection === "down" && !menuOpen ? "-80px" : "0px"
+          scrollDirection === "down" && !menuOpen ? "-90px" : "0px"
         })`,
         boxShadow: `${
           (scrollDirection === "down" && !menuOpen) || prevScrollPosition === 0
