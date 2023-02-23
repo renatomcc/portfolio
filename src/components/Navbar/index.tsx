@@ -6,9 +6,11 @@ import {
   StyledLink,
   Hamburger,
   Menu,
+  Content
 } from "./styles";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import MySVG from "../../config/MySVG";
+import { useSpring, config, animated } from "react-spring";
 
 const Navbar = () => {
   const [prevScrollPosition, setPrevScrollPosition] = useState(0);
@@ -22,6 +24,14 @@ const Navbar = () => {
     setScrollDirection(currentPosition > prevScrollPosition ? "down" : "up");
     setPrevScrollPosition(currentPosition);
   }, [prevScrollPosition]);
+
+    const slideAnimation = useSpring({
+      opacity: 1,
+      transform: 'translateY(0%)',
+      from: { opacity: 0, transform: 'translateY(-100%)' },
+      config: { duration: 500, ...config.default },
+      delay: 300
+    });
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -61,9 +71,10 @@ const Navbar = () => {
           (scrollDirection === "down" && !menuOpen) || prevScrollPosition === 0
             ? "none"
             : "2px 2px 15px #031123"
-        }`,
+        }`
       }}
     >
+      <Content style={slideAnimation}>
       {!menuOpen && (
         <NavbarLogo href="/" aria-label="Ir para o início">
           <MySVG />
@@ -129,6 +140,7 @@ const Navbar = () => {
           </ul>
         </Menu>
       )}
+      </Content>
     </Container>
   );
 };

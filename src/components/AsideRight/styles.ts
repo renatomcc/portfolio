@@ -1,10 +1,12 @@
+import { animated } from "react-spring";
 import styled from "styled-components";
 
 const media = {
   mobile: "@media(max-width: 1100px)",
 };
 
-export const Container = styled.div`
+export const Container = styled(animated.div)`
+  z-index: 3;
   position: fixed;
   right: 20px;
   bottom: 0;

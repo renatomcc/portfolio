@@ -17,6 +17,7 @@ export const Container = styled.div`
   text-align: left;
 
   ${media.mobile} {
+    padding-top: 70px;
     width: 100%;
     margin: 40px 100px;
   }

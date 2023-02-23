@@ -1,3 +1,4 @@
+import { animated } from "react-spring";
 import styled from "styled-components";
 
 const media = {
@@ -26,6 +27,13 @@ export const Container = styled.div`
   }
 `;
 
+export const Content = styled(animated.div)`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const NavbarLogo = styled.a`
   width: 60px;
   height: 60px;
@@ -33,7 +41,7 @@ export const NavbarLogo = styled.a`
   svg {
     width: 60px;
     height: 60px;
-    :hover{
+    :hover {
       fill: aliceblue;
     }
   }
