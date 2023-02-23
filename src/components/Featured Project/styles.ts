@@ -80,6 +80,7 @@ export const ProjectImage = styled.div`
   }
   img {
     width: 500px;
+    max-height: 300px;
     filter: opacity(50%);
     transition: all ease-in-out 0.2s;
     cursor: pointer;

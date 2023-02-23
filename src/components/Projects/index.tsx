@@ -45,6 +45,23 @@ function Projects() {
       githubLink: "https://github.com/renatomcc/league-champions",
       websiteLink: "https://league-nextjs.vercel.app",
     },
+    {
+      title: "Guess the Champion",
+      description:
+        "App de adivinhar os campeões do jogo League of Legends.",
+      imageSrc: "/static/images/guess.png",
+      imageAlt: "Guess the Champion",
+      technologies: [
+        "React Native",
+        "TypeScript",
+        "Styled Components",
+      ],
+      descPosition: "left",
+      imgPositionLeft: "auto",
+      imgPositionRight: 0,
+      githubLink: "https://github.com/renatomcc/league-guess-the-champion",
+      websiteLink: "https://play.google.com/store/apps/details?id=com.guessTheChampion.app&fbclid=IwAR3BxVZGdATWclsXFlIUKtRP8b8Z983bZndK6FgVaLjN3SZR1-uKZHHqlUg",
+    },
   ];
   const allProjects = [
     {

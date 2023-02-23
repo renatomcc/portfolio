@@ -6,10 +6,11 @@ const media = {
 
 export const Container = styled.div`
   width: 900px;
+  padding-top: 150px;
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
   gap: 15px;
@@ -17,7 +18,7 @@ export const Container = styled.div`
 
   ${media.mobile} {
     width: 100%;
-    margin-bottom: 100px;
+    margin: 40px 100px;
   }
 `;
 

@@ -7,6 +7,7 @@ const media = {
 export const Container = styled.div`
   width: 930px;
   height: auto;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -9,8 +9,8 @@ type TextProps = {
 };
 
 export const Container = styled.div`
-  width: 100%;
   height: 100vh;
+  width: 100%;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
@@ -18,10 +18,10 @@ export const Container = styled.div`
   justify-content: center;
   padding: 50px;
   gap: 15px;
-  min-height: 100vh;
   text-align: center;
 
   ${media.mobile} {
+    height: 110vh;
     padding: 20px;
   }
 `;
