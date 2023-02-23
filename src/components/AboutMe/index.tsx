@@ -43,7 +43,7 @@ function AboutMe() {
           </SkillsContent>
         </ContentText>
         <ContentImage>
-          <img src="https://pbs.twimg.com/media/E11ZtjtWEAEj7vs?format=jpg&name=small" />
+          <img src="/static/images/Renato.png" />
         </ContentImage>
       </Content>
     </Container>

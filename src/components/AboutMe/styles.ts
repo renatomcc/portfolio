@@ -81,9 +81,17 @@ export const ContentImage = styled.div`
   max-width: 50%;
   font-weight: 300;
   img {
-    max-width: 60%;
+    border-radius: 10px;
+    max-width: 70%;
     ${media.mobile} {
       max-width: 250px;
+      filter: opacity(100%);
+    }
+    filter: opacity(50%);
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+    &:hover {
+      filter: opacity(100%);
     }
   }
   ${media.mobile} {

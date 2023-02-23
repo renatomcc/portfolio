@@ -111,7 +111,6 @@ function Projects() {
     },
   ];
 
-  const [showMore, setShowMore] = useState(false);
   const [displayedProjects, setDisplayedProjects] = useState(
     allProjects.slice(0, 2)
   );
