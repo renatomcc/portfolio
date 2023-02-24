@@ -106,7 +106,7 @@ const Navbar = () => {
             </a>
           </li>
           <StyledLink
-            href="https://drive.google.com/file/d/17ePfhfq9UqpczqKrIpGczymNUF1FDZiS/view?usp=sharing"
+            href="https://drive.google.com/file/d/1PnkitlZKG1gcVlRwcRDlzsn_NcISUvB-/view?usp=sharing"
             target="_blank"
           >
             Curriculo
