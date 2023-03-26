@@ -37,6 +37,7 @@ function AboutMe() {
             <li>TypeScript</li>
             <li>React Native</li>
             <li>Angular</li>
+            <li>Vue</li>
             <li>Next</li>
             <li>Node.js</li>
             <li>Git</li>

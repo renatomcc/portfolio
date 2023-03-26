@@ -115,7 +115,7 @@ export const StyledLink = styled.a`
 export const Hamburger = styled.div`
   cursor: pointer;
   position: fixed;
-  top: 20px;
+  top: 10px;
   right: 30px;
   z-index: 100;
   ${media.desktop} {
