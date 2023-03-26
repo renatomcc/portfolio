@@ -109,6 +109,21 @@ function Projects() {
       githubLink: "https://github.com/renatomcc/dom-games",
       websiteLink: "https://domgames-renatomcc.netlify.app",
     },
+    {
+      title: "Lista de Colaboradores",
+      description:
+        "Aplicação fullstack para gestão de pessoas com a lista dos colaboradores e suas avaliações",
+      technologies: ["Vue", "Css", "Python", "Flask"],
+      githubLink: "https://github.com/renatomcc/flask-vue-app",
+      websiteLink: null,
+    },
+    {
+      title: "Angular e-commerce",
+      description: "E-commerce store com filtro de itens e carrinho de compras",
+      technologies: ["Angular", "Sass"],
+      githubLink: "https://github.com/renatomcc/e-commerce",
+      websiteLink: "https://e-commerce-tau-ten.vercel.app",
+    },
   ];
 
   const [displayedProjects, setDisplayedProjects] = useState(
@@ -123,7 +138,7 @@ function Projects() {
   });
 
   const handleShowMore = () => {
-    displayedProjects.length < 6
+    displayedProjects.length < 8
       ? setDisplayedProjects(allProjects.slice(0, displayedProjects.length + 2))
       : setDisplayedProjects(allProjects.slice(0, 2));
   };
@@ -149,7 +164,7 @@ function Projects() {
           ))}
         </AllProjects>
         <StyledButton onClick={handleShowMore}>
-          {displayedProjects.length < 6 ? "Mostrar mais" : "Mostrar menos"}
+          {displayedProjects.length < 8 ? "Mostrar mais" : "Mostrar menos"}
         </StyledButton>
       </Content>
     </Container>
