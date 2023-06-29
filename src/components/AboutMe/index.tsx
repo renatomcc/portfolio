@@ -19,7 +19,7 @@ function AboutMe() {
         <ContentText>
           <p>
             Meu interesse por essa área começou aos 12 anos, quando ainda
-            descobravando a internet criei meu primeiro blog na plataforma
+            desbravando a internet criei meu primeiro blog na plataforma
             gratuíta blogspot, onde eu copiava códigos de tutoriais que
             ensinavam a personalizar sua página. <br />
             Desde então eu nunca perdi o interesse nessa área, e criar coisas
